@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 🎥 StreamPulse: Real-Time Video Chat with AI Object Detection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+StreamPulse is a full-stack WebRTC-based peer-to-peer video chat app enhanced with real-time AI-powered object detection overlays using TensorFlow.js. It enables 1-on-1 encrypted video calls with live object tracking on the video feed — all directly in the browser.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🧠 Real-World Use Cases
 
-### `npm start`
+StreamPulse demonstrates how **AI-powered video communication** can impact real-world applications:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔍 Smart Surveillance
+Detect and label people or objects live on camera for security, retail, or public safety.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🧑‍🏫 Remote Education
+Helps instructors auto-label equipment or tools in science/engineering labs during video calls.
 
-### `npm test`
+### 🧏‍♀️ AI-Assisted Accessibility
+Supports hearing-impaired users with real-time object labeling during video chats.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 💬 Developer Prototype
+Acts as a reference project to build AI overlays for telehealth, coaching, or live streaming apps.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 📹 Peer-to-peer encrypted video chat via WebRTC
+- 🧠 Live object detection using TensorFlow.js COCO-SSD
+- ⚡ Real-time video stream overlay with bounding boxes
+- 🔁 Socket.IO signaling server for offer/answer/ICE
+- 🔌 STUN server integration for public connectivity
+- 🧠 Detection only runs on caller's end to save resources
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Category        | Tools |
+|-----------------|-------|
+| Frontend        | React, WebRTC, TensorFlow.js |
+| Backend         | Node.js, Express, Socket.IO |
+| AI Model        | TensorFlow.js COCO-SSD |
+| Signaling       | Socket.IO |
+| Deployment (opt)| Vercel (frontend), Render/Glitch (backend) |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📦 Local Development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Clone the repo
+```bash
+git clone https://github.com/ashritkvs/StreamPulse.git
+cd StreamPulse
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1)
+Start the backend
+cd server
+npm install
+node index.js
 
-### Code Splitting
+2)Start the frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+cd ../client
+npm install
+npm start
 
-### Analyzing the Bundle Size
+3)Open two tabs at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+http://localhost:3000
 
-### Making a Progressive Web App
+Tab 1: Click OK → Caller
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Tab 2: Click Cancel → Receiver
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
